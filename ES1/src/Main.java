@@ -5,7 +5,7 @@ public class Main {
 
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Scanner in = new Scanner(System.in);
         int nThread;
@@ -17,9 +17,14 @@ public class Main {
 
         for (i=0;i<nThread;i++){
             myThread thread = new myThread("T"+i,r.nextInt(5001));
+            //thread.join();
             thread.start();
+
         }
 
+
+
+        System.out.println("FINITO TUTTO");
 
 
     }
